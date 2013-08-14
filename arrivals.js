@@ -5,7 +5,7 @@
         this.letters  = 20;
 
         this.board    = document.getElementById(board_id);
-        this.chars    = " ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-";
+        this.chars    = " ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-:;,.!?";
         this.content  = content;
         this.c        = 0;
 
@@ -163,7 +163,8 @@
 
         //fixme: this regex should match this.chars
         //remove any unwanted letters
-        text = text.replace(/[^a-zA-Z0-9 -]/g, '').toUpperCase();
+        //text = text.replace(/[^a-zA-Z0-9 -]/g, '').toUpperCase();
+        text = text.toUpperCase();
 
         //pad the string, so the number of chars == this.letters
         while(text.length < this.letters){
